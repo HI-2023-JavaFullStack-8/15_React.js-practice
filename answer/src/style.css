@@ -1,0 +1,32 @@
+div {
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar button {
+    padding: 7px;
+    margin-left: 10px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    background-color: lightskyblue;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 5px;
+}
+
+.menusTitle {
+    justify-content: space-between;
+}
+
+.menuBox {
+    background-color: skyblue;
+}
+
+.menuBox:hover {
+    background-color: lightblue;
+}
