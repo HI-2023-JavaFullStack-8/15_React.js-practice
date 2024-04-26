@@ -1,36 +1,20 @@
-// Login.js
-import React, { useState } from 'react';
-import LoginForm from '../components/form/LoginForm';
-import Navbar from '../components/commons/Navbar';
+import { Navigate } from "react-router-dom";
+import LoginForm from "../components/form/LoginForm";
 
+function Login(){
 
+    
+    const loginStatus = !!localStorage.getItem('isLogin');
 
-function Login() {
-
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const handleUsernameChange = (event) => {
-        setUsername(event.target.value);
-    };
-
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value);
-    };
+    if(loginStatus) {
+        return <Navigate to="/" replace={ true }/>
+    }
 
     return (
-        <div>
-            <h2>Login Page</h2>
-            <LoginForm 
-                isLoggedIn={isLoggedIn} 
-                setIsLoggedIn={setIsLoggedIn} 
-                username={username} 
-                handleUsernameChange={handleUsernameChange} 
-                password={password} 
-                handlePasswordChange={handlePasswordChange} 
-            />
-        </div>
+        <>
+            <h1>로그인 페이지</h1>
+            <LoginForm/>
+        </>
     );
 }
 

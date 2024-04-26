@@ -19,12 +19,12 @@ function MenuDetail () {
  
      useEffect(
          () => {
-             /* 메뉴 삭제 완료 확인 후 /menu로 이동 */
+            
              if (result.delete) {
                  alert('메뉴 삭제');
                  navigate(`/menu`);
              }
-         }, // eslint-disable-next-line
+         }, 
          [result]
      );
  
@@ -32,7 +32,7 @@ function MenuDetail () {
          <div>
              <h1>메뉴 상세</h1>
              <h1>
-                 { /* 로그인 된 상황에만 button이 보이도록 조건부 랜더링 */ }
+               
                  { (loginStatus) && 
                      <>
                          <button onClick={ updateHandler }>메뉴 수정</button>

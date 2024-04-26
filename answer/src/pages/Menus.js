@@ -3,12 +3,12 @@ import { useNavigate } from "react-router-dom";
 
 function Menus() {
 
-    // const loginStatus = !!localStorage.getItem('isLogin');
+    const loginStatus = !!localStorage.getItem('isLoggedin');
     const navigate = useNavigate();
     
     return (
         <div>
-            {/* <h1>메뉴 목록 {  <button onClick={ () => navigate(`/menu/regist`) }>메뉴 추가</button> } </h1> */}
+            <h1>메뉴 목록 {  <button onClick={ () => navigate(`/menu/regist`) }>메뉴 추가</button> } </h1>
             <MenuList/>
         </div>
     );

@@ -6,6 +6,8 @@ import store from './Store';
 import Layout from "./layouts/Layout";
 import Menus from "./pages/Menus";
 import MenuDetail from "./pages/MenuDetail";
+import MenuRegist from "./pages/MenuRegist";
+import MenuModify from "./pages/MenuModify";
 
 
 
@@ -19,8 +21,13 @@ function App() {
             <Route path="menu">
               <Route index element={<Menus />} />
               <Route path=":id" element={<MenuDetail />} />
+              <Route path="regist" element={<MenuRegist />} />
+              <Route path="modify">
+                <Route index element={<MenuModify />} /> 
+                <Route path=":id" element={<MenuModify />} /> 
+              </Route>
             </Route>
-            <Route path="/login" element={<Login />} />
+            <Route path="login" element={<Login />} />
           </Route>
         </Routes>
       </BrowserRouter>

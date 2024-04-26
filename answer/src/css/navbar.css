@@ -20,16 +20,15 @@
     margin-right: 10px;
     color: #000000;
     text-decoration: none;
-    padding: 10px 15px; /* 패딩 추가 */
     border-radius: 5px; /* 둥근 테두리 추가 */
-    border: solid 1px #000000;
+    border: solid 1px #585252;
   }
 
   .navbar-link-logout {
     margin-right: 10px;
     color: #000000;
     text-decoration: none;
-    padding: 8px 13px; /* 패딩 추가 */
+    padding: 6px 11px; /* 패딩 추가 */
     border-radius: 5px; /* 둥근 테두리 추가 */
     border: solid 1px #000000;
 

@@ -1,54 +1,75 @@
-import { useDispatch } from 'react-redux';
-import { login, logout } from '../../modules/loginActions';
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from 'react-router-dom';
+import { callLoginAPI } from '../../apis/UserAPICalls';
+import { resetLoginUser } from '../../modules/loginReducer';
+
+
 
 function LoginForm() {
 
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-    const isLoggedIn = useSelector(state => state.login.isLoggedIn); // Redux 상태에서 isLoggedIn 가져오기
+    const navigate = useNavigate();
     const dispatch = useDispatch();
+    const result = useSelector(state => state.loginReducer);
+    const loginStatus = !!localStorage.getItem('isLogin');
 
-    const handleSubmit = (event) => {
-        dispatch(login(username)); // 로그인 액션 디스패치
-        event.preventDefault();
-    };
 
-    const handleLogout = () => {
-        dispatch(logout()); // 로그아웃 액션 디스패치
-    };
 
-    const handleUsernameChange = (event) => {
-        setUsername(event.target.value); // 사용자 이름 상태 업데이트
-    };
-
-    const handlePasswordChange = (event) => {
-        setPassword(event.target.value); // 비밀번호 상태 업데이트
-    };
+    const [loginInfo, setLoginInfo] = useState(
+        {
+            id: '',
+            password: ''
+        }
+    );
 
     
+    const onChangeHandler = (e) => {
+        setLoginInfo(
+            {
+                ...loginInfo,
+                [e.target.name]: e.target.value
+            }
+        );
+    }
+
+   
+    const onClickHandler = () => {
+
+        
+        dispatch(callLoginAPI(loginInfo));
+
+    }
+
+    useEffect(
+        () => {
+
+            if (result?.message) {
+                alert('아이디와 비밀번호를 확인해주세요');
+                setLoginInfo(
+                    {
+                        id: '',
+                        password: ''
+                    }
+                );
+                dispatch(resetLoginUser());
+            } else if (loginStatus) {
+                navigate('/');
+            }
+        }, 
+        [result]
+    );
+
+
     return (
-        <div>
-            {/* 로그인 상태에 따라 다른 버튼을 렌더링 */}
-            {isLoggedIn ? (
-                <>
-                    <button onClick={handleLogout}>로그아웃</button>
-                </>
-            ) : (
-                <form onSubmit={handleSubmit}>
-                    <div>
-                        <label>Username:</label>
-                        <input type="text" value={username} onChange={handleUsernameChange} />
-                    </div>
-                    <div>
-                        <label>Password:</label>
-                        <input type="password" value={password} onChange={handlePasswordChange} />
-                    </div>
-                    <button type="submit">로그인</button>
-                </form>
-            )}
-        </div>
+        <>
+            <div>
+                <label>ID : </label>
+                <input type="text" name="id" value={loginInfo.id} onChange={onChangeHandler} /> &nbsp;&nbsp;&nbsp;
+                <label>PASSWORD : </label>
+                <input type="password" name="password" value={loginInfo.password} onChange={onChangeHandler} />
+                <button onClick={onClickHandler}>로그인</button>
+            </div>
+        </>
     );
 }
 

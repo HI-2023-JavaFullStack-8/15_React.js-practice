@@ -1,4 +1,3 @@
-import ReactDOM from 'react-dom/client';
 
 /* root reducer */ 
 
@@ -7,7 +6,7 @@ import loginReducer from './loginReducer';
 import menuReducer from './MenuModule';
 
 const rootReducer = combineReducers({
-    login: loginReducer,
+    loginReducer,
     menuReducer
 });
 
