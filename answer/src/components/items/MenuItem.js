@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 
-function MenuItem() {
+function MenuItem({ menu }) {
 
     return (
-        <Link to={ `menu/${menu.id}`}>
-            <div>
-                <h3>메뉴이름: </h3>
-                <h3>메뉴가격: </h3>
-                <h3>메뉴종류: </h3>
+        <Link to={ `/menu/${ menu.id }` }>
+            <div className="menuItem">
+                <h3>이름 : { menu.menuName }</h3>
+                <h3>가격 : { menu.menuPrice }</h3>
+                <h4>종류 : { menu.categoryName }</h4>
             </div>
         </Link>
     );
-
 }
 
 export default MenuItem;

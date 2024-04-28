@@ -17,11 +17,11 @@ function App() {
           <Route index element={<Main />} />
           <Route path="menu">
             <Route index element={<Menus />} />
-              <Route path=":id" element={<MenuDetails />} />
-              <Route path="insert-menu" element={<InsertMenu />} />
-              <Route path="update-menu" >
-                <Route path=":id" element={<UpdateMenu />} />
-              </Route>
+            <Route path=":id" element={<MenuDetails />} />
+            <Route path="insert_menu" element={<InsertMenu />} />
+            <Route path="update_menu" >
+              <Route path=":id" element={<UpdateMenu />} />
+            </Route>
           </Route>
           <Route path="login" element={<Login />} />
         </Route>

@@ -1,5 +1,5 @@
 div {
-    justify-content: center;
+    display:  inline-block;
     text-align: center;
     padding: 10px;
 }
@@ -19,14 +19,19 @@ a:-webkit-any-link {
     padding: 5px;
 }
 
-.menusTitle {
-    justify-content: space-between;
+.menuBox div {
+    display: inline-block;
+    margin: 5px;
 }
 
-.menuBox {
+.menuItem {
+    width: 300px;
+    background-color: lightskyblue;
+    cursor: pointer;
+    color: white;
+    padding : 5px;
+}
+
+.menuItem:hover {
     background-color: skyblue;
-}
-
-.menuBox:hover {
-    background-color: lightblue;
 }

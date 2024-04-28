@@ -9,7 +9,7 @@ function Menus() {
     return (
         <div className="menu">
             <h1>메뉴목록</h1>
-            { (loginStatus) && <button onClick={() => navigate(`/menu/insert-menu`)}>메뉴 등록</button> }
+            { (loginStatus) && <button onClick={() => navigate(`/menu/insert_menu`)}>메뉴 등록</button> }
             <MenuList />
         </div>
     );

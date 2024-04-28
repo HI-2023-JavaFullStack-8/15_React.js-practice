@@ -8,18 +8,7 @@
   ],
   "menu": [
     {
-      "id": 1,
-      "menuName": "열무김치라떼",
-      "menuPrice": 4500,
-      "categoryName": "쥬스",
-      "isOrderable": true,
-      "detail": {
-        "description": "갓 담근 열무김치를 착즙한 순도 100% 열무김치와 대관령 목장에서 방금 짜낸 싱싱한 우유의 조합",
-        "image": "/images/1.PNG"
-      }
-    },
-    {
-      "id": 2,
+      "id": "2",
       "menuName": "우럭스무디",
       "menuPrice": 5000,
       "categoryName": "쥬스",
@@ -30,7 +19,7 @@
       }
     },
     {
-      "id": 3,
+      "id": "3",
       "menuName": "생갈치쉐이크",
       "menuPrice": 6000,
       "categoryName": "쥬스",
@@ -41,7 +30,7 @@
       }
     },
     {
-      "id": 4,
+      "id": "4",
       "menuName": "갈릭미역파르페",
       "menuPrice": 7000,
       "categoryName": "기타",
@@ -52,7 +41,7 @@
       }
     },
     {
-      "id": 5,
+      "id": "5",
       "menuName": "앙버터김치찜",
       "menuPrice": 13000,
       "categoryName": "한식",
@@ -63,7 +52,7 @@
       }
     },
     {
-      "id": 6,
+      "id": "6",
       "menuName": "생마늘샐러드",
       "menuPrice": 12000,
       "categoryName": "한식",
@@ -74,7 +63,7 @@
       }
     },
     {
-      "id": 7,
+      "id": "7",
       "menuName": "민트미역국",
       "menuPrice": 15000,
       "categoryName": "한식",
@@ -85,7 +74,7 @@
       }
     },
     {
-      "id": 8,
+      "id": "8",
       "menuName": "한우딸기국밥",
       "menuPrice": 20000,
       "categoryName": "한식",
@@ -96,7 +85,7 @@
       }
     },
     {
-      "id": 9,
+      "id": "9",
       "menuName": "홍어마카롱",
       "menuPrice": 9000,
       "categoryName": "서양",
@@ -107,7 +96,7 @@
       }
     },
     {
-      "id": 10,
+      "id": "10",
       "menuName": "코다리마늘빵",
       "menuPrice": 7000,
       "categoryName": "동양",
@@ -118,7 +107,7 @@
       }
     },
     {
-      "id": 11,
+      "id": "11",
       "menuName": "정어리빙수",
       "menuPrice": 10000,
       "categoryName": "기타",
@@ -129,7 +118,7 @@
       }
     },
     {
-      "id": 12,
+      "id": "12",
       "menuName": "날치알스크류바",
       "menuPrice": 2000,
       "categoryName": "기타",
@@ -140,7 +129,7 @@
       }
     },
     {
-      "id": 13,
+      "id": "13",
       "menuName": "직화구이젤라또",
       "menuPrice": 8000,
       "categoryName": "기타",
@@ -151,7 +140,7 @@
       }
     },
     {
-      "id": 14,
+      "id": "14",
       "menuName": "과메기커틀릿",
       "menuPrice": 13000,
       "categoryName": "일식",
@@ -162,7 +151,7 @@
       }
     },
     {
-      "id": 15,
+      "id": "15",
       "menuName": "죽방멸치튀김우동",
       "menuPrice": 11000,
       "categoryName": "일식",
@@ -173,7 +162,7 @@
       }
     },
     {
-      "id": 16,
+      "id": "16",
       "menuName": "흑마늘아메리카노",
       "menuPrice": 9000,
       "categoryName": "커피",
@@ -184,7 +173,7 @@
       }
     },
     {
-      "id": 17,
+      "id": "17",
       "menuName": "아이스가리비관자육수",
       "menuPrice": 6000,
       "categoryName": "쥬스",
@@ -195,7 +184,7 @@
       }
     },
     {
-      "id": 18,
+      "id": "18",
       "menuName": "붕어빵초밥",
       "menuPrice": 35000,
       "categoryName": "일식",
@@ -206,7 +195,7 @@
       }
     },
     {
-      "id": 19,
+      "id": "19",
       "menuName": "까나리코코넛쥬스",
       "menuPrice": 9000,
       "categoryName": "쥬스",
@@ -217,7 +206,7 @@
       }
     },
     {
-      "id": 20,
+      "id": "20",
       "menuName": "마라깐쇼한라봉",
       "menuPrice": 22000,
       "categoryName": "쥬스",
@@ -228,7 +217,7 @@
       }
     },
     {
-      "id": 21,
+      "id": "21",
       "menuName": "돌미나리백설기",
       "menuPrice": 5000,
       "categoryName": "한식",
@@ -236,6 +225,17 @@
       "detail": {
         "description": "거름이 풍성한 미나리깡에서 수확한 국내산 돌미나리를 이용한 백설기",
         "image": "/images/21.PNG"
+      }
+    },
+    {
+      "id": "22",
+      "menuName": "칼국수",
+      "menuPrice": 8000,
+      "categoryName": "한식",
+      "isOrderable": true,
+      "detail": {
+        "description": "따땃한 칼국수",
+        "image": "/images/test.png"
       }
     }
   ]

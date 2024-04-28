@@ -7,7 +7,7 @@ export const request = async(method, url, data) => {
 
     return await axios({
         method,
-        url: `${DOMAIN}${URL}`,
+        url: `${DOMAIN}${url}`,
         data 
     })
     .then(res => res.data);
