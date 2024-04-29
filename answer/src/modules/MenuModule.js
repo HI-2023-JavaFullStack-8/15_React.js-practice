@@ -1,21 +1,6 @@
 import { createActions, handleActions } from 'redux-actions';
 
-/* 초기값 */
-// const initialState = [
-//     {
-//         id: '',
-//         menuName: '',
-//         menuPrice: 0,
-//         categoryName: '',
-//         isOrderable: true,
-//         details: {
-//             description: '',
-//             image: ''
-//         }
-//     }
-// ];
-
-const initialState = []; // 빈 배열 대신 빈 객체로 초기화
+const initialState = [];
 
 /* action */
 /* type */
