@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { callModifyMenuAPI } from '../../apis/MenuApiCalls';
+import '../../css/menu-modify-form.css';
 
 function MenuModifyForm() {
 
@@ -10,7 +11,7 @@ function MenuModifyForm() {
     const navigate = useNavigate();
     const result = useSelector(state => state.menuReducer);
 
-   
+
     const [modifyMenu, setModifyMenu] = useState(
         {
             id: 0,
@@ -25,13 +26,13 @@ function MenuModifyForm() {
         }
     );
 
-   
+
     const onChangeHandler = (e) => {
 
         let name = e.target.name;
         let value = e.target.value;
 
-        
+
         switch (name) {
             case 'menuPrice':
                 value = parseInt(value);
@@ -59,7 +60,7 @@ function MenuModifyForm() {
 
     useEffect(
         () => {
-          
+
             if (result.modify) {
                 alert('메뉴 수정');
                 navigate(`/menu`);
@@ -69,21 +70,21 @@ function MenuModifyForm() {
     );
 
     const onClickHandler = () => {
-        
+
         dispatch(callModifyMenuAPI(modifyMenu));
     }
 
     return (
         <>
-            <h1>{id}번 메뉴 수정</h1>
-            <label>메뉴 이름 : </label>
-            <input type="text" name="menuName" value={modifyMenu.menuName} onChange={onChangeHandler} />
+            <h1 className="menu-modify-form-title">{id}번 메뉴 수정</h1>
+            <label className="menu-modify-form-label">메뉴 이름 : </label>
+            <input className="menu-modify-form-input" type="text" name="menuName" value={modifyMenu.menuName} onChange={onChangeHandler} />
             <br />
-            <label>메뉴 가격 : </label>
-            <input type="number" name="menuPrice" value={modifyMenu.menuPrice} onChange={onChangeHandler} />
+            <label className="menu-modify-form-label">메뉴 가격 : </label>
+            <input className="menu-modify-form-input" type="number" name="menuPrice" value={modifyMenu.menuPrice} onChange={onChangeHandler} />
             <br />
-            <label>카테고리 : </label>
-            <select name="categoryName" value={modifyMenu.categoryName} onChange={onChangeHandler}>
+            <label className="menu-modify-form-label">카테고리 : </label>
+            <select className="menu-modify-form-select" name="categoryName" value={modifyMenu.categoryName} onChange={onChangeHandler}>
                 <option>한식</option>
                 <option>일식</option>
                 <option>서양</option>
@@ -93,18 +94,19 @@ function MenuModifyForm() {
                 <option>기타</option>
             </select>
             <br />
-            <label>판매 여부 : </label>
-            <select name="isOrderable" value={modifyMenu.isOrderable} onChange={onChangeHandler}>
+            <label className="menu-modify-form-label">판매 여부 : </label>
+            <select className="menu-modify-form-select" name="isOrderable" value={modifyMenu.isOrderable} onChange={onChangeHandler}>
                 <option value="true">판매 가능</option>
                 <option value="false">판매 불가</option>
             </select>
             <br />
-            <label>설명 : </label>
-            <textarea name="description" value={modifyMenu.detail.description} onChange={onChangeHandler}></textarea>
+            <label className="menu-modify-form-label">설명 : </label>
+            <textarea className="menu-modify-form-textarea" name="description" value={modifyMenu.detail.description} onChange={onChangeHandler}></textarea>
             <br />
-           
-            <button onClick={onClickHandler}>메뉴 수정</button>
+
+            <button className="menu-modify-button" onClick={onClickHandler}>메뉴 수정</button>
         </>
+
     )
 }
 

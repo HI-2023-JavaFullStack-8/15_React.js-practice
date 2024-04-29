@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from 'react-router-dom';
 import { callLoginAPI } from '../../apis/UserAPICalls';
 import { resetLoginUser } from '../../modules/loginReducer';
+import '../../css/login-form.css';
 
 
 
@@ -22,7 +23,7 @@ function LoginForm() {
         }
     );
 
-    
+
     const onChangeHandler = (e) => {
         setLoginInfo(
             {
@@ -32,10 +33,10 @@ function LoginForm() {
         );
     }
 
-   
+
     const onClickHandler = () => {
 
-        
+
         dispatch(callLoginAPI(loginInfo));
 
     }
@@ -55,14 +56,14 @@ function LoginForm() {
             } else if (loginStatus) {
                 navigate('/');
             }
-        }, 
+        },
         [result]
     );
 
 
     return (
         <>
-            <div>
+            <div className="login-form-container">
                 <label>ID : </label>
                 <input type="text" name="id" value={loginInfo.id} onChange={onChangeHandler} /> &nbsp;&nbsp;&nbsp;
                 <label>PASSWORD : </label>

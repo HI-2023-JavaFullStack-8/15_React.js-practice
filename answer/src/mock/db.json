@@ -19,17 +19,6 @@
       }
     },
     {
-      "id": "3",
-      "menuName": "생갈치쉐이크",
-      "menuPrice": 6000,
-      "categoryName": "쥬스",
-      "isOrderable": true,
-      "detail": {
-        "description": "목포 밤바다를 누비는 생갈치를 이용한 고단백 쉐이크 음료",
-        "image": "/images/3.PNG"
-      }
-    },
-    {
       "id": "4",
       "menuName": "갈릭미역파르페",
       "menuPrice": 7000,

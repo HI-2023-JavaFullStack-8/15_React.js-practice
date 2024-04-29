@@ -24,12 +24,12 @@ a {
 
 .menuItem {
   width: 300px;
-  background-color: lightgrey;
+  background-color: rgb(148, 212, 135);
   cursor: pointer;
-  color: white;
+  color: rgb(0, 0, 0);
   padding : 5px;
 }
 
 .menuItem:hover {
-  background-color: gray;
+  background-color: rgb(32, 175, 80);
 }

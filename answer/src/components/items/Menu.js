@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { callGetMenuAPI } from "../../apis/MenuApiCalls";
+import '../../css/menu.css';
 
 function Menu({ id }) {
 
@@ -18,13 +19,25 @@ function Menu({ id }) {
 
     return (
         menu && (
-            <>
-                <h3>메뉴 이름 : {menu.menuName}</h3>
-                <h3>메뉴 가격 : {menu.menuPrice}</h3>
-                <h3>메뉴 종류 : {menu.categoryName}</h3>
-                <h3>메뉴 상세 : {menu.detail.description}</h3>
-                <img src={menu.detail.image} style={{ maxWidth: 500 }} alt={menu.menuName} />
-            </>
+            <div className="menu-card">
+                <div className="menu-card-header">
+                    <h3 className="menu-title">{menu.menuName}</h3>
+                </div>
+                <div className="menu-card-body">
+                    <div className="menu-info">
+                        <span className="info-label">메뉴 가격:</span> {menu.menuPrice}원
+                    </div>
+                    <div className="menu-info">
+                        <span className="info-label">메뉴 종류:</span> {menu.categoryName}
+                    </div>
+                    <div className="menu-info">
+                        <span className="info-label">메뉴 상세:</span> {menu.detail.description}
+                    </div>
+                </div>
+                <div className="menu-card-footer">
+                    <img className="menu-image" src={menu.detail.image} alt={menu.menuName} />
+                </div>
+            </div>
         )
     );
 }
