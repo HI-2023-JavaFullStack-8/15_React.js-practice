@@ -1,0 +1,14 @@
+.menu-button {
+    padding: 10px 20px; /* 버튼 내부의 여백을 조절합니다. */
+    margin: 5px; /* 버튼 간의 간격을 설정합니다. */
+    border: none;
+    border-radius: 5px;
+    background-color: #01964b75; /* 배경색을 설정합니다. */
+    color: rgb(0, 0, 0); /* 텍스트 색상을 설정합니다. */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* 호버 효과를 추가합니다. */
+}
+
+.menu-button:hover {
+    background-color: #039464; /* 호버 시 배경색 변경 */
+}

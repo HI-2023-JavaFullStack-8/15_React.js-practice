@@ -1,0 +1,26 @@
+
+.menu-card {
+    width: 300px; 
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px auto; 
+}
+
+.menu-card-header {
+    background-color: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.menu-card-body {
+    padding: 20px;
+}
+
+.menu-card-footer img {
+    max-width: 100%;
+    display: block;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}

@@ -1,0 +1,47 @@
+/* 네비게이션 바 스타일 */
+.navbar {
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* 링크 목록 스타일 */
+  .navbar-links {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 5px; /* 둥근 테두리 추가 */
+  }
+  
+  /* 링크 스타일 */
+  .navbar-link {
+    margin-right: 10px;
+    color: #000000;
+    text-decoration: none;
+    border-radius: 5px; /* 둥근 테두리 추가 */
+    border: solid 1px #585252;
+  }
+
+  .navbar-link-logout {
+    margin-right: 10px;
+    color: #000000;
+    text-decoration: none;
+    padding: 6px 11px; /* 패딩 추가 */
+    border-radius: 5px; /* 둥근 테두리 추가 */
+    border: solid 1px #000000;
+
+  }
+  
+  /* 활성화된 링크 스타일 */
+  .navbar-link.active {
+    background-color: #4CAF50; /* 활성화된 링크의 배경색 설정 */
+  }
+  
+  /* 사용자 인사 스타일 */
+  .navbar-greeting {
+    color: #000000;
+    font-weight: bold;
+
+  }

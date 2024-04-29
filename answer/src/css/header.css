@@ -1,0 +1,19 @@
+/* 헤더 컨테이너 스타일 */
+.header-container {
+    background-color: #333; /* 배경색 설정 */
+    color: #fff; /* 글자색 설정 */
+    padding: 18px; /* 여백 설정 */
+  }
+  
+  /* 제목 스타일 */
+  .title {
+    font-size: 30px; /* 글자 크기 설정 */
+    font-weight: bold; /* 글자 두께 설정 */
+    text-align: center;
+  }
+
+    /* 사용자 인사 스타일 */
+    .hi-greeting {
+        color: white;
+        font-weight: bold;
+      }
