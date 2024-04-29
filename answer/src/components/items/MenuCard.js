@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 
-function Menu({ menu }) {
+function MenuCard({ menu }) {
     return (
+        menu &&
         <Link to={`/menu/${menu.id}`}>
             <div className="menuItem">
                 <h5>{menu.menuName}</h5>
@@ -12,4 +13,4 @@ function Menu({ menu }) {
     );
 }
 
-export default Menu;
+export default MenuCard;

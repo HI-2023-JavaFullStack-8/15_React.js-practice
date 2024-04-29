@@ -30,17 +30,14 @@ export const { menu: { getMenulist, getMenu } } = createActions({
 const menuReducer = handleActions(
     {
         [GET_MENULIST]: (state, { payload }) => {
-            console.log('[reducer] payload: ', payload);
+            console.log('[menulist reducer] payload: ', payload);
 
             return payload
         },
         [GET_MENU]: (state, { payload }) => {
-            console.log('[reducer] payload: ', payload);
+            console.log('[menu reducer] payload: ', payload);
 
-            return {
-                ...state,
-                menu: payload.menu
-            };
+            return payload
         }
     }, initialState
 );

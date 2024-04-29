@@ -14,7 +14,7 @@ export function getMenuListAPI() {
 
         const result = await request('GET', '/menu');
 
-        console.log('[getMenuListAPI의 menuData] : ', result);
+        console.log('[getMenuListAPI의 result] : ', result);
 
         dispatch(getMenulist(result));
 
@@ -27,7 +27,7 @@ export function getMenuAPI(id) {
     return async (dispatch) => {
         const result = await request('GET', `/menu/${id}`);
 
-        console.log('[getMenuAPI의 menuData] : ', result);
+        console.log('[getMenuAPI의 result] : ', result);
 
         dispatch(getMenu(result));
     }

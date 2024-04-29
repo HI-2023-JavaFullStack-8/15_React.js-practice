@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-function Menu() {
+function Menu({ menu }) {
 
     const result = useSelector(state => state.menuReducer);
     const menu = result.menu;
