@@ -1,0 +1,11 @@
+.MenuBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.MenuBox .MenuItem {
+    width: calc(33.333% - 10px);
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
