@@ -22,7 +22,7 @@ export default function Menu({ menu }) {
             <h2>Menu: {menuName}</h2>
             {detail && (
                 <div style={{ display: 'inline-block', maxWidth: '100%' }}>
-                    <img src={detail.image} style={{ maxWidth: '100%' }} />
+                    <img src={detail.image} style={{ maxWidth: '100%' }} alt='No image'/>
                     <TableContainer component={Paper} style={{ maxWidth: '100%', margin: 'auto', marginTop: '20px' }}>
                         <Table aria-label="simple table">
                             <TableHead>

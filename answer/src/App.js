@@ -9,6 +9,7 @@ import { getMenuAPI } from "./apis/MenuAPICalls";
 import Main from "./pages/Main";
 import Login from "./pages/Login";
 import MenuModify from "./pages/MenuModify";
+import MenuRegist from "./pages/MenuRegist";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,13 +23,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Main />} />
+          <Route path="menuRegist" element={<MenuRegist />} />
           <Route path="menus">
             <Route index element={<Menus />} />
             <Route path="detail/:menuId" element={<MenuDetail />} />
             <Route path="modify/:menuId" element={<MenuModify />} />
           </Route>
           <Route path="login" element={<Login />} />
-          <Route path="*" element={<Main />} />
+          <Route path="*" element={<Error />} />
         </Route>
         <Route path="*" element={<Error />} />
       </Routes>

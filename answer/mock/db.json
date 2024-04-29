@@ -237,6 +237,40 @@
         "description": "거름이 풍성한 미나리깡에서 수확한 국내산 돌미나리를 이용한 백설기",
         "image": "/images/21.PNG"
       }
+    },
+    {
+      "id": "",
+      "menuName": "샤인머스캣 자일리톨 사탕",
+      "menuPrice": "3800",
+      "categoryName": "기타",
+      "isOrderable": true,
+      "detail": {
+        "description": "",
+        "image": ""
+      },
+      "description": "ㅇ"
+    },
+    {
+      "id": "",
+      "menuName": "선인장 초콜릿",
+      "menuPrice": "11000",
+      "categoryName": "기타",
+      "isOrderable": true,
+      "detail": {
+        "description": "아프리카 선인장을 직접 빻고 카카오 100%를 함유하여 만든 수제 초콜릿",
+        "image": ""
+      }
+    },
+    {
+      "id": "a198",
+      "menuName": "asdsdf",
+      "menuPrice": "1111",
+      "categoryName": "기타",
+      "isOrderable": false,
+      "detail": {
+        "description": "dsfsdf",
+        "image": ""
+      }
     }
   ]
 }

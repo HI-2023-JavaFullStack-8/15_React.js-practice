@@ -14,7 +14,7 @@ function MenuItem({ menu }) {
         <Link to={`/menus/detail/${menu.id}`}>
             <div className={itemStyle.MenuItem} style={{ textAlign: 'center' }}>
                 {detail && detail.image && (
-                    <img src={detail.image} style={{ maxWidth: '100%', height: 300 }} />
+                    <img src={detail.image} style={{ maxWidth: '100%', height: 300 }} alt='No image'/>
                 )}
                 <h3 style={{textAlign: 'left', margin: '0 0 0 10px'}}>Menu: {menu.menuName}</h3>
                 <h3 style={{textAlign: 'left', margin: '0 0 0 10px'}}>Price: KRW {addCommasToNumber(menu.menuPrice)}</h3>
