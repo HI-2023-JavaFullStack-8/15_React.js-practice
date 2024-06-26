@@ -1,9 +1,4 @@
-하기 파일들을 추가적으로 설치해야 작동합니다.
+# React practice project
 
-npm install @mui/material @emotion/react @emotion/styled
-
-npm install @mui/material @mui/styled-engine-sc styled-components
-
-npm install @mui/icons-material
-
-npm install @reduxjs/toolkit
+This is a simple website where users can see the lists of food.
+Images and data are called from a server side, using redux-thux. 

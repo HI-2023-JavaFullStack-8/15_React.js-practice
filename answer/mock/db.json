@@ -19,15 +19,15 @@
       }
     },
     {
-      "id": "2",
       "menuName": "우럭스무디",
       "menuPrice": 5000,
       "categoryName": "쥬스",
-      "isOrderable": true,
+      "isOrderable": "Yes",
       "detail": {
         "description": "태안 바다에서 갓 잡아올린 싱싱한 우럭을 이용한 상큼한 스무디",
         "image": "/images/2.PNG"
-      }
+      },
+      "id": "2"
     },
     {
       "id": "3",
